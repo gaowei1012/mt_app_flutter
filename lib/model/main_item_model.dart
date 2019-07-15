@@ -9,11 +9,11 @@ class MainItemModel {
   MainItemModel({this.title, this.icon, this.url, this.statusBarColor});
 
   factory MainItemModel.fromJson(Map<String, dynamic> json) {
-    return MainItemModel(
+    return json !=null? MainItemModel(
       title: json['title'],
       icon: json['icon'],
       url: json['url'],
       statusBarColor: json['statusBarColor']
-    );
+    ) : null;
   }
 }

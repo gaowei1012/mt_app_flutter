@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() { 
     super.initState();
-    loadData();
+    loadData();/// 加载homepage data
   }
 
 
@@ -40,7 +40,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   loadData() async {
-    
     // try {
       var result = await HomeDao.fetch();
       setState(() {

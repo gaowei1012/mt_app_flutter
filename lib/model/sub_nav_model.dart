@@ -9,11 +9,11 @@ class SubNavModel {
   SubNavModel({this.icon, this.title, this.url, this.hideAppBar});
 
   factory SubNavModel.fromJson(Map<String, dynamic> json) {
-    return SubNavModel(
+    return json != null ? SubNavModel(
       icon: json['icon'],
       title: json['title'],
       url: json['url'],
       hideAppBar: json['hideAppBar']
-    );
+    ) : null;
   } 
 }

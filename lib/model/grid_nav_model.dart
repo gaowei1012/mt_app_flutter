@@ -11,7 +11,7 @@ class GridNavModel {
   GridNavModel({this.hotel, this.flight, this.travel});
 
   factory GridNavModel.fromJson(Map<String, dynamic> json) {
-    return json != null
+    return json != null /// 如果返回的json是空数据
         ? GridNavModel(
             hotel: HotelModel.fromJson(json['hotel']),
             flight: FlightModel.fromJson(json['flight']),

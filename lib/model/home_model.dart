@@ -24,13 +24,13 @@ class HomeModel {
     List<CommonModel> localNavList = localNavListJson.map((i) => CommonModel.fromJson(i)).toList();
     var subNavListJson = json['subNavList'] as List;
     List<SubNavModel> subNavList = subNavListJson.map((i) => SubNavModel.fromJson(i)).toList();
-    return HomeModel(
+    return json != null ? HomeModel(
       config: ConfigModel.fromJson(json['config']),
       bannerList: bannerList,
       localNavList: localNavList,
       gridNav: GridNavModel.fromJson(json['gridNav']),
       subNavList: subNavList,
       salesBox: SalesBoxModel.fromJson(json['salesBox'])
-    );
+    ) : null;
   }
 }

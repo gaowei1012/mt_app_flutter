@@ -13,7 +13,7 @@ class SalesBoxModel {
   SalesBoxModel({this.icon, this.moreUrl, this.bigCard1, this.bigCard2, this.smallCard1, this.smallCard2, this.smallCard3, this.smallCard4});
 
   factory SalesBoxModel.fromJson(Map<String, dynamic> json) {
-    return SalesBoxModel(
+    return json != null ? SalesBoxModel(
       icon: json['icon'],
       moreUrl: json['moreUrl'],
       bigCard1: BigCardModel.fronJson(json['bigCard1']),
@@ -22,7 +22,7 @@ class SalesBoxModel {
       smallCard2: BigCardModel.fronJson(json['smallCard2']),
       smallCard3: BigCardModel.fronJson(json['smallCard3']),
       smallCard4: BigCardModel.fronJson(json['smallCard4']),
-    );
+    ) : null;
   }
 
 }
@@ -35,10 +35,10 @@ class BigCardModel {
   BigCardModel({this.icon, this.url, this.title});
 
   factory BigCardModel.fronJson(Map<String, dynamic> json) {
-    return BigCardModel(
+    return json != null ? BigCardModel(
       icon: json['icon'],
       url: json['url'],
       title: json['title'],
-    );
+    ) : null;
   }
 }

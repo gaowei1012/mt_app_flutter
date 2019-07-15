@@ -6,8 +6,8 @@ class ConfigModel {
   ConfigModel({this.searchUrl});
 
   factory ConfigModel.fromJson(Map<String, dynamic> json) {
-    return ConfigModel(
+    return json != null ? ConfigModel(
       searchUrl: json['searchUrl']
-    );
+    ) : null;
   }
 }

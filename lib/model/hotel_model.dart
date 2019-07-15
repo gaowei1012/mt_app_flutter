@@ -13,7 +13,7 @@ class HotelModel {
   HotelModel({this.startColor, this.endColor, this.mainItem, this.item1, this.item2, this.item3, this.item4});
 
   factory HotelModel.fromJson(Map<String, dynamic> json) {
-    return HotelModel(
+    return json != null ? HotelModel(
       startColor: json['startColor'],
       endColor: json['endColor'],
       mainItem: MainItemModel.fromJson(json['mainItem']),
@@ -21,7 +21,7 @@ class HotelModel {
       item2: Item2Model.fromJson(json['item2']),
       item3: Item3Model.fromJson(json['item3']),
       item4: Item3Model.fromJson(json['item4']),
-    );
+    ) : null;
   }
 }
 
@@ -33,11 +33,11 @@ class Item1Model {
   Item1Model({this.title, this.url, this.statusBarColor});
 
   factory Item1Model.fromJson(Map<String, dynamic> json) {
-    return Item1Model(
+    return json != null ? Item1Model(
       title: json['title'],
       url: json['url'],
       statusBarColor: json['statusBarColor'] 
-    );
+    ) : null;
   }
 }
 
@@ -48,10 +48,10 @@ class Item2Model {
   Item2Model({this.title, this.url});
 
   factory Item2Model.fromJson(Map<String, dynamic> json) {
-    return Item2Model(
+    return json != null ? Item2Model(
       title: json['title'],
       url: json['url'],
-    );
+    ) : null;
   }
 }
 
@@ -63,10 +63,10 @@ class Item3Model {
   Item3Model({this.title, this.url, this.hideAppBar});
 
   factory Item3Model.fromJson(Map<String, dynamic> json) {
-    return Item3Model(
+    return json != null ? Item3Model(
       title: json['title'],
       url: json['url'],
       hideAppBar: json['hideAppBar']
-    );
+    ) : null;
   }
 }
