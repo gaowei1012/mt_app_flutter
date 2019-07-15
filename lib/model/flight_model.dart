@@ -22,11 +22,6 @@ class FlightModel {
       item4: Item1Model.fromJson(json['item4']),
     ) : null;
   }
-
-  /// toJson() 
-  Map<String, dynamic> toJson() {
-
-  }
 }
 
 class MainItem {

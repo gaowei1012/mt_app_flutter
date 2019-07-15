@@ -33,9 +33,15 @@ class MainItemModel {
 
   MainItemModel({this.title, this.icon, this.url, this.hideAppBar, this.statusBarColor});
 
-  /// 代码未完成
+/// main item model
   factory MainItemModel.fromJson(Map<String, dynamic> json) {
-    return json != null ? MainItemModel() : null;
+    return json != null ? MainItemModel(
+      title: json['title'],
+      icon: json['icon'],
+      url: json['url'],
+      hideAppBar: json['hideAppBar'],
+      statusBarColor: json['statusBarColor']
+    ) : null;
   }
 }
 
