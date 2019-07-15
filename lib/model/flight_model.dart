@@ -23,6 +23,10 @@ class FlightModel {
     );
   }
 
+  /// toJson() 
+  Map<String, dynamic> toJson() {
+
+  }
 }
 
 class MainItem {
